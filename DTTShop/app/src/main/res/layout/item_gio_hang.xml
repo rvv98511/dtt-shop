@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:background="@color/green_light"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageViewGioHangSP"
+            android:scaleType="fitXY"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="5dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewGioHangTenSP"
+                android:text="Tên sản phẩm"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:id="@+id/textViewGioHangGiaSP"
+                android:text="0 ₫"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewGioHangGiaKhuyenMai"
+                android:text="0 ₫"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:gravity="left|center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="Số lượng: "
+                    android:textSize="16sp"
+                    android:textColor="@color/black"/>
+
+                <ImageButton
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="0.2"
+                    android:id="@+id/imageButtonRemoveSL"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:src="@drawable/ic_remove"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/textViewGioHangSoLuongMua"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"/>
+
+                <ImageButton
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="0.2"
+                    android:id="@+id/imageButtonAddSL"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:src="@drawable/ic_add"/>
+
+                <CheckBox
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:id="@+id/checkBoxMuaSP"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center"/>
+
+                <ImageButton
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="0.2"
+                    android:id="@+id/imageButtonDeleteGioHangSP"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:src="@drawable/ic_trash"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

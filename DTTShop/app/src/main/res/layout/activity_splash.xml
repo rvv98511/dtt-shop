@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.SplashActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_loading">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayoutSplash"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageViewLogoSplash"
+            android:src="@drawable/icon_logo"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="DTT Shop"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/animation_view"
+        app:lottie_rawRes="@raw/loading"
+        app:lottie_autoPlay="true"
+        android:layout_below="@+id/relativeLayoutSplash"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        app:lottie_loop="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    tools:context=".activity.GioHangActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Giỏ hàng"
+        android:background="@color/green_dark"
+        android:id="@+id/toolBarGioHang"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayoutBottom"
+        android:layout_below="@+id/toolBarGioHang"
+        android:id="@+id/textViewGioHangRong"
+        android:text="Không có sản phẩm nào trong giỏ hàng"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewGioHang"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayoutBottom"
+        android:layout_below="@+id/toolBarGioHang"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayoutBottom"
+        android:layout_alignParentBottom="true"
+        android:background="@color/green_light">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:padding="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tổng tiền: "
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginStart="22dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewTongTien"
+                android:layout_weight="1"
+                android:text="0 ₫"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginEnd="22dp"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/appCompatButtonMuaHang"
+            android:text="Mua hàng"
+            android:textSize="16sp"
+            android:background="@drawable/bg_button"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

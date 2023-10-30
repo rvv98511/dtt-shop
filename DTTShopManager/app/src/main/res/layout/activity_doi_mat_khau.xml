@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DoiMatKhauActivity"
+    android:background="@color/green"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Đổi mật khẩu"
+        android:background="@color/green_dark"
+        android:id="@+id/toolBarDoiMatKhau"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cardViewLienHe"
+        android:layout_margin="6dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/green_light"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đổi mật khẩu tài khoản"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:passwordToggleEnabled="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/editTextNewPasswordUpdate"
+                        android:hint="Mật khẩu mới"
+                        android:inputType="textPassword"
+                        android:drawableStart="@drawable/ic_key"
+                        android:drawablePadding="8dp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:passwordToggleEnabled="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/editTextRetypeNewPasswordUpdate"
+                        android:hint="Nhập lại mật khẩu mới"
+                        android:inputType="textPassword"
+                        android:drawableStart="@drawable/ic_key"
+                        android:drawablePadding="8dp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:id="@+id/appCompatButtonNewPasswordUpdate"
+                    android:text="Cập nhật"
+                    android:textSize="12sp"
+                    android:background="@drawable/bg_button"
+                    android:enabled="false"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DangKyActivity"
+    android:background="@color/green_light"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đăng ký"
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="5dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="clear_text"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginBottom="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/editTextUserNameSignUp"
+                    android:inputType="text"
+                    android:hint="Tên tài khoản"
+                    android:drawableStart="@drawable/ic_user"
+                    android:drawablePadding="8dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="clear_text"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginBottom="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/editTextTenKHSignUp"
+                    android:hint="Tên khách hàng"
+                    android:inputType="text"
+                    android:drawableStart="@drawable/ic_name"
+                    android:drawablePadding="8dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="clear_text"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginBottom="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/editTextPhoneSignUp"
+                    android:hint="Số điện thoại"
+                    android:inputType="phone"
+                    android:drawableStart="@drawable/ic_phone"
+                    android:drawablePadding="8dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="clear_text"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginBottom="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/editTextEmailSignUp"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:drawableStart="@drawable/ic_email"
+                    android:drawablePadding="8dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:passwordToggleEnabled="true"
+                android:layout_marginBottom="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/editTextPasswordSignUp"
+                    android:hint="Mật khẩu"
+                    android:inputType="textPassword"
+                    android:drawableStart="@drawable/ic_key"
+                    android:drawablePadding="8dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/editTextRetypePasswordSignUp"
+                    android:hint="Nhập lại mật khẩu"
+                    android:inputType="textPassword"
+                    android:drawableStart="@drawable/ic_key"
+                    android:drawablePadding="8dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/appCompatButtonSignUp"
+            android:text="Đăng ký"
+            android:background="@drawable/bg_button"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đã có tài khoản?"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewLogin"
+                android:text="Đăng nhập"
+                android:textColor="@color/blue"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

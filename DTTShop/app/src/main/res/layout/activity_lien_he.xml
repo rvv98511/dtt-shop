@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LienHeActivity"
+    android:orientation="vertical"
+    android:id="@+id/linearLayoutBgContact"
+    android:background="@color/green">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Liên hệ"
+        android:background="@color/green_dark"
+        android:id="@+id/toolBarLienHe"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardViewLienHe"
+        android:layout_below="@+id/toolBarLienHe"
+        android:layout_margin="12dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/green_light">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@color/green_light">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Số điện thoại:"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0363151285"
+                    android:autoLink="phone"
+                    android:textColorLink="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:drawableStartCompat="@drawable/ic_phone"
+                    android:drawablePadding="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email:"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginTop="6dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="duongthientuantoan@gmail.com"
+                    android:autoLink="email"
+                    android:textColorLink="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:drawableStartCompat="@drawable/ic_email"
+                    android:drawablePadding="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Địa chỉ:"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginTop="6dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="111 Lý Nam Đế, phường 7, quận 11, TP.HCM"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:drawableStartCompat="@drawable/ic_address"
+                    android:drawablePadding="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trang web:"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginTop="6dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="www.example.com"
+                    android:autoLink="web"
+                    android:textColorLink="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:drawableStartCompat="@drawable/ic_web"
+                    android:drawablePadding="5dp"/>
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardViewLienHe"
+        android:id="@+id/imageViewGoogleMap"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/google_map"
+        android:scaleType="fitXY"/>
+
+</RelativeLayout>

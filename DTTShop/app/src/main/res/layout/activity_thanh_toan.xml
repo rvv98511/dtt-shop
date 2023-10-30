@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.ThanhToanActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/green">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Thanh toán"
+        android:background="@color/green_dark"
+        android:id="@+id/toolBarThanhToan"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolBarThanhToan"
+        android:fillViewport="true">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="6dp"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="10dp"
+                android:backgroundTint="@color/green_light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/linearLayoutTop"
+                        android:orientation="vertical"
+                        android:layout_marginTop="5dp">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:endIconMode="clear_text"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginBottom="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:id="@+id/editTextTenKHDatHang"
+                                android:inputType="text"
+                                android:hint="Tên người mua"
+                                android:drawableStart="@drawable/ic_name"
+                                android:drawablePadding="5dp"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:endIconMode="clear_text"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:id="@+id/editTextPhoneDatHang"
+                                android:inputType="phone"
+                                android:hint="Số điện thoại"
+                                android:drawableStart="@drawable/ic_phone"
+                                android:drawablePadding="5dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="15dp"
+                                android:layout_marginBottom="5dp"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:endIconMode="clear_text"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:id="@+id/editTextEmailDatHang"
+                                android:inputType="text"
+                                android:hint="Email"
+                                android:drawableStart="@drawable/ic_email"
+                                android:drawablePadding="5dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="15dp"
+                                android:layout_marginBottom="5dp"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:endIconMode="clear_text"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:id="@+id/editTextAddressDatHang"
+                                android:inputType="text"
+                                android:hint="Địa chỉ giao hàng"
+                                android:drawableStart="@drawable/ic_address"
+                                android:drawablePadding="5dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="15dp"
+                                android:layout_marginBottom="5dp"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:id="@+id/editTextDateDatHang"
+                                android:inputType="text"
+                                android:hint="Ngày đặt hàng"
+                                android:textColor="@color/black"
+                                android:enabled="false"
+                                android:drawableStart="@drawable/ic_date"
+                                android:drawablePadding="5dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="15dp"
+                                android:layout_marginBottom="5dp"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginBottom="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Hình thức:"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center"/>
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="2"
+                                android:gravity="center">
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Chuyển khoản\nZaloPay"
+                                    android:textSize="13sp"
+                                    android:id="@+id/radioButtonChuyenKhoanZaloPay"
+                                    android:buttonTint="@color/blue"
+                                    android:layout_weight="1"
+                                    android:checked="true"/>
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tiền mặt"
+                                    android:textSize="13sp"
+                                    android:buttonTint="@color/blue"
+                                    android:layout_weight="1"/>
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/linearLayoutTop"
+                        android:orientation="vertical"
+                        android:gravity="bottom">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:padding="2dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Tổng số lượng:"
+                                android:textColor="@android:color/holo_red_light"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:layout_marginStart="22dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textViewTongSoLuongMua"
+                                android:layout_weight="1"
+                                android:text="0"
+                                android:textColor="@android:color/holo_red_light"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:gravity="end"
+                                android:layout_marginEnd="22dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:padding="2dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Tổng tiền:"
+                                android:textColor="@android:color/holo_red_light"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                android:layout_marginStart="22dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textViewTongTienMuaHang"
+                                android:layout_weight="1"
+                                android:text="0 ₫"
+                                android:textColor="@android:color/holo_red_light"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                android:gravity="end"
+                                android:layout_marginEnd="22dp"/>
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/appCompatButtonDatHang"
+                            android:text="Đặt hàng"
+                            android:textSize="16sp"
+                            android:background="@drawable/bg_button"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="5dp"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+
+</RelativeLayout>

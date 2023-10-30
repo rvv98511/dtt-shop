@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_light"
+    tools:context=".activity.ChiTietSanPhamActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Chi tiết sản phẩm"
+        android:background="@color/green_dark"
+        android:id="@+id/toolBarChiTietSP">
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/frameLayoutGioHang"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_shopping_cart"
+                android:layout_marginTop="12dp"/>
+
+            <com.nex3z.notificationbadge.NotificationBadge
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:id="@+id/notificationBadge"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="4dp"/>
+
+        </FrameLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolBarChiTietSP"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/imageViewChiTietSP"
+                android:scaleType="fitXY"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewTenChiTietSP"
+                    android:text="Tên sản phẩm"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:id="@+id/textViewGiaChiTietSP"
+                    android:text="0 ₫"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGiaKhuyenMaiChiTietSP"
+                    android:text="0 ₫"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@android:color/holo_red_dark"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Còn lại: "
+                        android:textSize="18sp"
+                        android:textColor="@color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textViewSoLuongChiTietSP"
+                            android:text="0"
+                            android:textSize="18sp"
+                            android:textStyle="italic"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" sản phẩm"
+                            android:textSize="18sp"
+                            android:textStyle="italic"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Số lượng: "
+                        android:textSize="18sp"
+                        android:textColor="@color/black"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:id="@+id/spinnerSoLuong"
+                        android:background="@drawable/bg_spinner"/>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="6dp"
+                    android:id="@+id/appCompatButtonThemGioHang"
+                    android:text="Thêm vào giỏ hàng"
+                    android:textSize="13sp"
+                    android:background="@drawable/bg_button" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mô tả chi tiết sản phẩm:"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewMoTaChiTietSP"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="Nội dung mô tả chi tiết sản phẩm"/>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

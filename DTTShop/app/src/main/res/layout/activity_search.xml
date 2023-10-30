@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.SearchActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/green">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Tìm kiếm"
+        android:background="@color/green_dark"
+        android:id="@+id/toolBarSearch">
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/frameLayoutGioHang"
+            android:contentDescription="Giỏ hàng"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_shopping_cart"
+                android:layout_marginTop="12dp"/>
+
+            <com.nex3z.notificationbadge.NotificationBadge
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:id="@+id/notificationBadge"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="4dp"/>
+
+        </FrameLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="6dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_search_right"
+            android:drawablePadding="5dp"
+            android:id="@+id/editTextSearch"
+            android:hint="Nhập tên sản phẩm cần tìm"
+            android:backgroundTint="@color/blue"
+            android:paddingEnd="35dp"
+            android:maxLines="1"
+            android:inputType="text" />
+
+        <ImageButton
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:id="@+id/imageButtonClear"
+            android:background="@drawable/ic_close"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_marginEnd="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="6dp">
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerSearchTheoLoai"
+            android:layout_weight="1"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerSearchTheoGia"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/textViewSearchNone"
+        android:text="Không tìm thấy sản phẩm cần tìm"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerViewSearchSP"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"/>
+
+</LinearLayout>

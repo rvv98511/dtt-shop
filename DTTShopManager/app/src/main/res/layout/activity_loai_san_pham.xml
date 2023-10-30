@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/green"
+    tools:context=".activity.LoaiSanPhamActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolBarLoaiSP"
+        app:title="Tên loại sản phẩm"
+        android:background="@color/green_dark"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewLoaiSP"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp" />
+
+</LinearLayout>

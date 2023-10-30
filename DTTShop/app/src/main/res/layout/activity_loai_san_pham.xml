@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/green"
+    tools:context=".activity.LoaiSanPhamActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolBarLoaiSP"
+        app:title="Tên loại sản phẩm"
+        android:background="@color/green_dark">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:orientation="horizontal"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="?attr/actionBarSize"
+                android:src="@drawable/ic_search_left"
+                android:id="@+id/imageViewSearch"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="Tìm kiếm"/>
+
+            <FrameLayout
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/frameLayoutGioHang"
+                android:contentDescription="Giỏ hàng">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_shopping_cart"
+                    android:layout_marginTop="12dp"/>
+
+                <com.nex3z.notificationbadge.NotificationBadge
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:id="@+id/notificationBadge"
+                    android:layout_gravity="top|end"
+                    android:layout_marginTop="4dp"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewLoaiSP"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp" />
+
+</LinearLayout>

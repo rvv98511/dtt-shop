@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/drawerLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="Trang chủ"
+                android:background="@color/green_dark"
+                android:id="@+id/toolBarTrangChu"/>
+
+            <ViewFlipper
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:id="@+id/viewFilpper"/>
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/swipeRefreshLayoutSPMoi">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/green">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Các sản phẩm mới nhất"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textSize="20sp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/recyclerViewSPMoi"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/navigationViewDSMenu"
+            android:layout_gravity="start"
+            android:background="@color/green_light">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/listViewMenu"/>
+
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>
